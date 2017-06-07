@@ -291,7 +291,7 @@ public class TodoesCollectionThymeleafController {
      */
     @GetMapping(name = "list")
     public ModelAndView list(Model model) {
-        return new ModelAndView("/todoes/list");
+        return new ModelAndView("todoes/list");
     }
 
     /**
