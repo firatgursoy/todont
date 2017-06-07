@@ -461,7 +461,7 @@ public class TopicsCollectionThymeleafController {
      */
     @GetMapping(name = "list")
     public ModelAndView list(Model model) {
-        return new ModelAndView("/topics/list");
+        return new ModelAndView("topics/list");
     }
 
     /**
