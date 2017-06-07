@@ -17,12 +17,18 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.roo.addon.javabean.annotations.RooEquals;
+import org.springframework.roo.addon.javabean.annotations.RooJavaBean;
+import org.springframework.roo.addon.javabean.annotations.RooToString;
+import org.springframework.roo.addon.jpa.annotations.audit.RooJpaAudit;
+import org.springframework.roo.addon.jpa.annotations.entity.RooJpaEntity;
 
 /**
  * = Todo
  TODO
  *
  */
+@RooJpaEntity(entityFormatExpression = "#{text}")
 public class Todo {
 
     /**

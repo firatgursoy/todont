@@ -18,6 +18,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.roo.addon.jpa.annotations.entity.RooJpaEntity;
 
 /**
  * = Topic
@@ -25,6 +26,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  *
  */
 //@EnableJpaAuditing(auditorAwareRef = "springSecurityAuditorAware")
+@RooJpaEntity(entityFormatExpression = "#{text}")
 public class Topic {
 
     /**
