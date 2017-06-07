@@ -1,0 +1,21 @@
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-06-03 19:31:27
+project setup --topLevelPackage joy.todont --java 8
+jpa setup --provider HIBERNATE --database POSTGRES --databaseName db6m0mcog5oh6k --userName fouarwrolocaov --password 94238893f70392fa4bc30ec90c6d2b44b4a052661f146460fdef768fc8dbaf16 --hostName ec2-54-247-189-64.eu-west-1.compute.amazonaws.com\:5432/db6m0mcog5oh6k?sslmode=require&user=fouarwrolocaov&password=94238893f70392fa4bc30ec90c6d2b44b4a052661f146460fdef768fc8dbaf16
+entity jpa --class ~.domain.Todo  --entityFormatExpression "#{text}"
+field string --fieldName text --notNull
+entity jpa --class ~.domain.Topic --entityFormatExpression "#{name}"
+field string --fieldName name --notNull
+field set --fieldName todos --type ~.domain.Todo
+repository jpa --all
+service --all
+finder add --entity ~.domain.Todo --name findByTopic
+web mvc setup 
+web mvc view setup --type THYMELEAF 
+web mvc controller --all --responseType THYMELEAF
+web mvc finder --all --responseType THYMELEAF
+web mvc detail --entity ~.domain.Topic --field todos --views list,show --responseType THYMELEAF
+web mvc detail --all --views list,show --responseType THYMELEAF
+security setup --provider SPRINGLETS_JPA 
+jpa audit setup
+jpa audit add --entity ~.domain.Todo
+jpa audit add --entity ~.domain.Topic

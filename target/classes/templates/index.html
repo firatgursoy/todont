@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/home-layout}">
+    <head id="head">
+
+    <title data-th-text="#{welcome_label}">Welcome - SpringRoo Application</title>
+
+  </head>
+
+  <body class="home" id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+      <!-- CONTAINER -->
+      <div class="container bg-container">
+        <!-- CONTENT -->
+        <!--
+          Only the inner content of the following tag "section" is included
+          within the template, in the section "content"
+        -->
+        <section data-layout-fragment="content">
+          <div class="container-fluid content">
+
+            <div class="box-center">
+              <!-- Project info -->
+              <div class="row">
+                <div class="hidden-xs col-sm-4 col-sm-offset-1">
+                   <img height="200" alt="Spring Roo" data-th-src="@{/public/img/todologo.png}" src="../static/public/img/todologo.png" />
+                </div>
+                <div class="col-sm-6">
+                  <h2 data-th-text="#{info_homepage_header}">With ToDon't you can save and export your TO-DO's.</h2>
+                  <p data-th-text="#{info_homepage_paragraph}">Basic Todo experience.
+                  </p>
+                  <p class="lead" data-th-text="#{info_homepage_thanks}">Ready to advancement!</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </section>
+        <!-- /CONTENT -->
+      </div>
+      <!-- /CONTAINER -->
+
+      <footer class="container">
+        <!-- Content replaced by layout of the page displayed -->
+      </footer>
+
+      <!-- JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so that the pages load faster -->
+      <!-- JavaScript loaded by layout of the page displayed -->
+      <!--
+           Only the inner content of the following tag "javascript" is included
+           within the template, in the div "javascript"
+          -->
+      <div data-layout-fragment="javascript">
+      </div>
+
+  </body>
+
+</html>

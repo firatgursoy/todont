@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Footer</title>
+  </head>
+  <body id="body">
+    <!--
+    Only the internal content of the following div is included within
+    the template, in footer fragment
+    -->
+    <footer class="container" data-th-fragment="footer">
+
+       <div class="row">
+      	 <div class="col-sm-6 col-sm-offset-3">
+           <small     class="clearfix">
+             <a target="_blank" href="http://firatgursoy.com.tr/">I</a> <span class="glyphicon glyphicon-heart"></span>
+             Open source<br>
+               <span data-th-text="|${#calendars.format(#dates.createNow(),'yyyy')}|">
+                BLA</span>
+            </small>
+         </div>
+       </div>
+       <!-- certified logos -->
+       <div class="row">
+        <div class="col-sm-6 col-sm-offset-6 text-right">
+
+        </div>
+       </div>
+
+    </footer>
+
+  </body>
+</html>
